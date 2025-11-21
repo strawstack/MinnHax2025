@@ -1,0 +1,160 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyniy5kyw6wy5"]
+
+[ext_resource type="Texture2D" uid="uid://bvm7j2tyrrjhf" path="res://images/ice_floor.png" id="1_5vw27"]
+[ext_resource type="Texture2D" uid="uid://d3np33y0fp16a" path="res://images/mountain_back.png" id="2_kek77"]
+[ext_resource type="Texture2D" uid="uid://c0mdxquy6v5sl" path="res://images/mountain_front.png" id="3_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dt66cnlned1dv" path="res://images/player.png" id="4_efxa6"]
+[ext_resource type="Texture2D" uid="uid://cl4ciordjkjhd" path="res://images/sauna_room.png" id="5_dg77c"]
+[ext_resource type="Texture2D" uid="uid://dian7j7fogqs4" path="res://images/smoke.png" id="6_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://d1136lp0vy0rw" path="res://images/smoke_large.png" id="7_w48qg"]
+[ext_resource type="Texture2D" uid="uid://brr5qnrvjrw7a" path="res://images/stone_sauna.png" id="8_vivmo"]
+[ext_resource type="Texture2D" uid="uid://bd1rkq3h2p4tg" path="res://images/door_close.png" id="9_4c57u"]
+[ext_resource type="Texture2D" uid="uid://b3c4v1waoftlk" path="res://images/door_open.png" id="10_efxa6"]
+
+[node name="main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(184, 1232)
+limit_left = 0
+limit_top = 48
+limit_right = 2432
+limit_bottom = 1296
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+offset_right = 2432.0
+offset_bottom = 640.0
+color = Color(0.792157, 0.941176, 0.972549, 1)
+
+[node name="MountainBack" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(256, 488)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_kek77")
+
+[node name="MountainBack2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(752, 528)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_kek77")
+
+[node name="MountainBack3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1104, 488)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_kek77")
+
+[node name="MountainBack4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1632, 560)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_kek77")
+
+[node name="MountainBack5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2168, 640)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_kek77")
+
+[node name="MountainFront" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(240, 784)
+rotation = 0.523599
+texture = ExtResource("3_4c57u")
+
+[node name="MountainFront2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(880, 808)
+rotation = 0.523599
+texture = ExtResource("3_4c57u")
+
+[node name="MountainFront3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1456, 848)
+rotation = -0.523599
+texture = ExtResource("3_4c57u")
+
+[node name="MountainFront4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1216, 840)
+rotation = 0.523599
+texture = ExtResource("3_4c57u")
+
+[node name="MountainFront5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2272, 808)
+rotation = 0.523599
+texture = ExtResource("3_4c57u")
+
+[node name="Underwater" type="ColorRect" parent="."]
+visible = false
+offset_top = 640.0
+offset_right = 2432.0
+offset_bottom = 1344.0
+color = Color(0, 0.588235, 0.780392, 1)
+
+[node name="IceFloor" type="Sprite2D" parent="."]
+position = Vector2(832, 608)
+texture = ExtResource("1_5vw27")
+
+[node name="IceFloor3" type="ColorRect" parent="."]
+offset_left = 2048.0
+offset_top = 576.0
+offset_right = 2432.0
+offset_bottom = 640.0
+color = Color(0.282353, 0.792157, 0.894118, 1)
+
+[node name="SaunaRoom" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(544, 472)
+texture = ExtResource("5_dg77c")
+
+[node name="StoneSauna" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(608, 544)
+texture = ExtResource("8_vivmo")
+
+[node name="Player" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(480, 512)
+texture = ExtResource("4_efxa6")
+
+[node name="Smoke" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(560, 296)
+texture = ExtResource("6_ycdy4")
+
+[node name="Smoke2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(680, 120)
+texture = ExtResource("6_ycdy4")
+
+[node name="SmokeLarge" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(624, 208)
+texture = ExtResource("7_w48qg")
+
+[node name="SmokeLarge2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(520, 424)
+texture = ExtResource("7_w48qg")
+
+[node name="SmokeLarge3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(608, 512)
+texture = ExtResource("7_w48qg")
+
+[node name="DoorClose" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(701, 504)
+texture = ExtResource("9_4c57u")
+
+[node name="DoorOpen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(747, 504)
+texture = ExtResource("10_efxa6")
