@@ -33,31 +33,26 @@ color = Color(0.792157, 0.941176, 0.972549, 1)
 [node name="MountainBack" type="Sprite2D" parent="BackgroundArt"]
 position = Vector2(256, 488)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("2_kek77")
 
 [node name="MountainBack2" type="Sprite2D" parent="BackgroundArt"]
 position = Vector2(752, 528)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("2_kek77")
 
 [node name="MountainBack3" type="Sprite2D" parent="BackgroundArt"]
 position = Vector2(1104, 488)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("2_kek77")
 
 [node name="MountainBack4" type="Sprite2D" parent="BackgroundArt"]
 position = Vector2(1632, 560)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("2_kek77")
 
 [node name="MountainBack5" type="Sprite2D" parent="BackgroundArt"]
 position = Vector2(2168, 640)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("2_kek77")
 
 [node name="MountainFront" type="Sprite2D" parent="BackgroundArt"]
