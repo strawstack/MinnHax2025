@@ -16,7 +16,7 @@ var gc_2d
 var sprite
 
 func _ready():
-	gc_2d = get_tree().get_root().get_node("main_2d")
+	gc_2d = get_tree().get_root().get_node("main").gc_2d
 	sprite = $Sprite2D
 
 func _process(delta):

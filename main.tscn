@@ -1,16 +1,19 @@
-[gd_scene load_steps=499 format=4 uid="uid://l5br0xxi4hrv"]
+[gd_scene load_steps=502 format=4 uid="uid://l5br0xxi4hrv"]
 
-[ext_resource type="LightmapGIData" uid="uid://cbhl66ec6n2eo" path="res://main_3d.lmbake" id="1_pt58c"]
-[ext_resource type="Script" uid="uid://disiaul6c8flx" path="res://player.gd" id="1_wiwsh"]
-[ext_resource type="Material" uid="uid://d3uav4ud43aae" path="res://textures/candle_glow.tres" id="3_ndnd3"]
-[ext_resource type="Material" uid="uid://b64q8p0hove8m" path="res://textures/dark_solid.tres" id="3_vipva"]
-[ext_resource type="Material" uid="uid://nvecyfvl6x8k" path="res://textures/gold_emission.tres" id="3_xofcu"]
-[ext_resource type="Material" uid="uid://cihq1egwvnuys" path="res://textures/green_emission.tres" id="4_vipva"]
-[ext_resource type="Material" uid="uid://cnkvqu7pipf6h" path="res://textures/blue_emission.tres" id="5_et6uk"]
-[ext_resource type="Material" uid="uid://cmiribw0lmw45" path="res://textures/white_emission.tres" id="6_wi601"]
-[ext_resource type="Texture2D" uid="uid://bwwh8muuq6b02" path="res://model/posters_hand.png" id="9_238tj"]
-[ext_resource type="Material" uid="uid://clbbmch83xfhv" path="res://textures/very_dark_solid.tres" id="9_et6uk"]
-[ext_resource type="Material" uid="uid://0frcf4qlcwd5" path="res://textures/bright_white_emission.tres" id="9_wi601"]
+[ext_resource type="Script" uid="uid://baok6mxxgj1vu" path="res://gc.gd" id="1_dg77c"]
+[ext_resource type="LightmapGIData" uid="uid://cbhl66ec6n2eo" path="res://main_3d.lmbake" id="1_efxa6"]
+[ext_resource type="Script" uid="uid://disiaul6c8flx" path="res://player.gd" id="2_dg77c"]
+[ext_resource type="Material" uid="uid://b64q8p0hove8m" path="res://textures/dark_solid.tres" id="3_ycdy4"]
+[ext_resource type="Material" uid="uid://nvecyfvl6x8k" path="res://textures/gold_emission.tres" id="4_w48qg"]
+[ext_resource type="Material" uid="uid://cihq1egwvnuys" path="res://textures/green_emission.tres" id="5_vivmo"]
+[ext_resource type="Material" uid="uid://cnkvqu7pipf6h" path="res://textures/blue_emission.tres" id="6_2cqfq"]
+[ext_resource type="Material" uid="uid://cmiribw0lmw45" path="res://textures/white_emission.tres" id="7_yaehf"]
+[ext_resource type="Material" uid="uid://d3uav4ud43aae" path="res://textures/candle_glow.tres" id="8_074og"]
+[ext_resource type="Texture2D" uid="uid://bwwh8muuq6b02" path="res://model/posters_hand.png" id="9_cegan"]
+[ext_resource type="Material" uid="uid://0frcf4qlcwd5" path="res://textures/bright_white_emission.tres" id="10_82xsv"]
+[ext_resource type="Material" uid="uid://clbbmch83xfhv" path="res://textures/very_dark_solid.tres" id="11_getpj"]
+[ext_resource type="Script" uid="uid://b288uunbe7yst" path="res://poster.gd" id="12_w48qg"]
+[ext_resource type="PackedScene" uid="uid://cyniy5kyw6wy5" path="res://main_2d.tscn" id="13_ycdy4"]
 
 [sub_resource type="Environment" id="Environment_aas03"]
 
@@ -891,7 +894,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("3_xofcu"),
+"material": ExtResource("4_w48qg"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -922,7 +925,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("4_vipva"),
+"material": ExtResource("5_vivmo"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -953,7 +956,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("5_et6uk"),
+"material": ExtResource("6_2cqfq"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -984,7 +987,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("6_wi601"),
+"material": ExtResource("7_yaehf"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -2500,7 +2503,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("3_ndnd3"),
+"material": ExtResource("8_074og"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -2677,7 +2680,7 @@ shadow_mesh = SubResource("ArrayMesh_7iaxd")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8a36y"]
 resource_name = "Material.002"
 cull_mode = 2
-albedo_texture = ExtResource("9_238tj")
+albedo_texture = ExtResource("9_cegan")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pxbne"]
@@ -3653,7 +3656,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("3_vipva"),
+"material": ExtResource("3_ycdy4"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -5105,7 +5108,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("9_et6uk"),
+"material": ExtResource("11_getpj"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -5244,7 +5247,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h8d2x")
 
-[node name="main_3d" type="Node3D"]
+[node name="main" type="Node3D" node_paths=PackedStringArray("gc_2d")]
+script = ExtResource("1_dg77c")
+gc_2d = NodePath("main/Cube_010/poster/SubViewport/main_2d")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aas03")
@@ -5254,11 +5259,11 @@ transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107
 light_energy = 0.0
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
-light_data = ExtResource("1_pt58c")
+light_data = ExtResource("1_efxa6")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4599, 1, 2)
-script = ExtResource("1_wiwsh")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.46, 1, 1.33)
+script = ExtResource("2_dg77c")
 
 [node name="Pivot" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
@@ -5275,13 +5280,13 @@ shape = SubResource("CapsuleShape3D_wiwsh")
 [node name="roof" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 6.5, -17)
 visible = false
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_rba8x")
 skeleton = NodePath("")
 
 [node name="side" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -16)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_nrwyk")
 skeleton = NodePath("")
 
@@ -5427,7 +5432,7 @@ shape = SubResource("ConcavePolygonShape3D_238tj")
 
 [node name="Cube_002" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 7.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_wiwsh")
 skeleton = NodePath("")
 
@@ -5438,7 +5443,7 @@ shape = SubResource("ConcavePolygonShape3D_h6orv")
 
 [node name="Cube_003" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.5, -2.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_pt58c")
 skeleton = NodePath("")
 
@@ -5449,7 +5454,7 @@ shape = SubResource("ConcavePolygonShape3D_vomke")
 
 [node name="Cube_014" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 3, -15)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_ndnd3")
 skeleton = NodePath("")
 
@@ -5460,7 +5465,7 @@ shape = SubResource("ConcavePolygonShape3D_0xv2w")
 
 [node name="Cube_016" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4.5, -2.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_2wc1w")
 skeleton = NodePath("")
 
@@ -5471,7 +5476,7 @@ shape = SubResource("ConcavePolygonShape3D_csyg1")
 
 [node name="Cube_018" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4, 1.5, -0.1)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_8jj3j")
 skeleton = NodePath("")
 
@@ -5482,7 +5487,7 @@ shape = SubResource("ConcavePolygonShape3D_igkv5")
 
 [node name="Cube_019" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 1.5, -0.1)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_xofcu")
 skeleton = NodePath("")
 
@@ -5493,7 +5498,7 @@ shape = SubResource("ConcavePolygonShape3D_n6o5j")
 
 [node name="Cube_023" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1, 1.5, -6)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_vipva")
 skeleton = NodePath("")
 
@@ -5504,7 +5509,7 @@ shape = SubResource("ConcavePolygonShape3D_46p78")
 
 [node name="Cube_024" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1, 1.5, -7.1)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_et6uk")
 skeleton = NodePath("")
 
@@ -5515,7 +5520,7 @@ shape = SubResource("ConcavePolygonShape3D_jj4u6")
 
 [node name="Cube" type="MeshInstance3D" parent="main/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -15)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_wi601")
 skeleton = NodePath("")
 
@@ -5548,265 +5553,265 @@ skeleton = NodePath("")
 
 [node name="Cube_048" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -12.55)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_0xv2w")
 skeleton = NodePath("")
 
 [node name="Cube_049" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -12.9)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_udu0f")
 skeleton = NodePath("")
 
 [node name="Cube_050" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -13.2)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_csyg1")
 skeleton = NodePath("")
 
 [node name="Cube_051" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -14.5)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_igkv5")
 skeleton = NodePath("")
 
 [node name="Cube_052" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.35, -13.85)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_n6o5j")
 skeleton = NodePath("")
 
 [node name="Cube_053" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -14.2)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_46p78")
 skeleton = NodePath("")
 
 [node name="Cube_054" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.4, -14.8)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_jj4u6")
 skeleton = NodePath("")
 
 [node name="Cube_055" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -15.15)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_2euq5")
 skeleton = NodePath("")
 
 [node name="Cube_056" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -15.5)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_ymodp")
 skeleton = NodePath("")
 
 [node name="Cube_057" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.25, -15.8)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_cu7h2")
 skeleton = NodePath("")
 
 [node name="Cube_058" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -16.2)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_e143y")
 skeleton = NodePath("")
 
 [node name="Cube_059" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.4, -16.5)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_2sc0h")
 skeleton = NodePath("")
 
 [node name="Cube_060" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 2.3, -16.8)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_0bxaa")
 skeleton = NodePath("")
 
 [node name="Cube_061" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -12.8)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_ooa1k")
 skeleton = NodePath("")
 
 [node name="Cube_062" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.35, -12.15)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_h5gl5")
 skeleton = NodePath("")
 
 [node name="Cube_063" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -12.5)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_bao0s")
 skeleton = NodePath("")
 
 [node name="Cube_064" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.4, -13.1)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_4slyb")
 skeleton = NodePath("")
 
 [node name="Cube_065" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -13.45)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_jd4ae")
 skeleton = NodePath("")
 
 [node name="Cube_066" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -13.8)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_jk0wk")
 skeleton = NodePath("")
 
 [node name="Cube_067" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.25, -14.1)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_j5ggi")
 skeleton = NodePath("")
 
 [node name="Cube_068" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -14.55)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_xhhg6")
 skeleton = NodePath("")
 
 [node name="Cube_069" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -11.4)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_1l1yk")
 skeleton = NodePath("")
 
 [node name="Cube_070" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -11.7)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_fv8jn")
 skeleton = NodePath("")
 
 [node name="Cube_071" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.4, -14.9)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_b4wke")
 skeleton = NodePath("")
 
 [node name="Cube_072" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -15.25)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_5r05u")
 skeleton = NodePath("")
 
 [node name="Cube_073" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -15.6)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_o6dyh")
 skeleton = NodePath("")
 
 [node name="Cube_074" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.25, -15.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_6te2i")
 skeleton = NodePath("")
 
 [node name="Cube_075" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -16.2)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_mi0a1")
 skeleton = NodePath("")
 
 [node name="Cube_076" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.3, -16.5)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_ms71h")
 skeleton = NodePath("")
 
 [node name="Cube_077" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7, 3.4, -16.8)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_p2dyq")
 skeleton = NodePath("")
 
 [node name="Cube_106" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7, 1.65, -10.7)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_udm1c")
 skeleton = NodePath("")
 
 [node name="Cube_107" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 1.7, -10.3)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_8hmn5")
 skeleton = NodePath("")
 
 [node name="Cube_108" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 1.7, -17.3)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_gytyl")
 skeleton = NodePath("")
 
 [node name="Cube_109" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4, 1.7, -16.7)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_p3uev")
 skeleton = NodePath("")
 
 [node name="Cube_096" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7, 1.5, -15.3)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_vqqix")
 skeleton = NodePath("")
 
 [node name="Cube_097" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3, 1.5, -21.8)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_pmyc0")
 skeleton = NodePath("")
 
 [node name="Cube_099" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 1.5, -18.7)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_33viq")
 skeleton = NodePath("")
 
 [node name="Cube_100" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 1.5, -12.7)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_5ldkb")
 skeleton = NodePath("")
 
 [node name="Cube_101" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -12.1)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_iqy3q")
 skeleton = NodePath("")
 
 [node name="Cube_102" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8, 1.5, -9.8)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_om74n")
 skeleton = NodePath("")
 
 [node name="Cube_103" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, 1.5, -7.3)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_h82xa")
 skeleton = NodePath("")
 
 [node name="Cube_098" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7, 1.45, -21.2)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_ru4t0")
 skeleton = NodePath("")
 
 [node name="Cube_104" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2, 1.45, -9.7)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_w01mx")
 skeleton = NodePath("")
 
 [node name="Cube_105" type="MeshInstance3D" parent="main/glasses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8, 1.45, -6.7)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_aol2d")
 skeleton = NodePath("")
 
@@ -5814,7 +5819,7 @@ skeleton = NodePath("")
 
 [node name="Cube_110" type="MeshInstance3D" parent="main/candel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.45, -18.5)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_bahuc")
 skeleton = NodePath("")
 
@@ -5825,31 +5830,31 @@ skeleton = NodePath("")
 
 [node name="Cube_112" type="MeshInstance3D" parent="main/candel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.45, -12.5)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_08jp0")
 skeleton = NodePath("")
 
 [node name="Cube_113" type="MeshInstance3D" parent="main/candel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.45, -9.5)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_ytqnl")
 skeleton = NodePath("")
 
 [node name="Cube_114" type="MeshInstance3D" parent="main/candel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.45, -7)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_pg1p0")
 skeleton = NodePath("")
 
 [node name="Cube_115" type="MeshInstance3D" parent="main/candel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6, 1.65176, -18.7)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_jbkum")
 skeleton = NodePath("")
 
 [node name="Cube_116" type="MeshInstance3D" parent="main/candel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1, 1.65176, -18.4)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_opf0o")
 skeleton = NodePath("")
 
@@ -5873,144 +5878,156 @@ skeleton = NodePath("")
 
 [node name="Cube_153" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1, 1.25, -7.25)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_e2cqh")
 skeleton = NodePath("")
 
 [node name="Cube_152" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.95, -6.95)
-material_override = ExtResource("9_wi601")
+material_override = ExtResource("10_82xsv")
 mesh = SubResource("ArrayMesh_xgvvm")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, 3, -5.05)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_e0k78")
 skeleton = NodePath("")
 
 [node name="Cube_148" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.0500001, -6.95)
-material_override = ExtResource("9_wi601")
+material_override = ExtResource("10_82xsv")
 mesh = SubResource("ArrayMesh_217q1")
 skeleton = NodePath("")
 
 [node name="Cube_149" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95, 0.0500001, -3.55)
-material_override = ExtResource("9_wi601")
+material_override = ExtResource("10_82xsv")
 mesh = SubResource("ArrayMesh_akc0x")
 skeleton = NodePath("")
 
 [node name="Cube_150" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7, 1.05, -25.05)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_v5d0a")
 skeleton = NodePath("")
 
 [node name="Cube_151" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 1.05, -25.05)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_gysnk")
 skeleton = NodePath("")
 
 [node name="Cube_004" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1, 1.3, 2.5)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_eppak")
 skeleton = NodePath("")
 
 [node name="Cube_005" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1, 0.8, 0.9)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_jait0")
 skeleton = NodePath("")
 
 [node name="Cube_006" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1, 0.8, 4.1)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_1ago5")
 skeleton = NodePath("")
 
 [node name="Cube_007" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1, 1.3, 2.5)
-material_override = ExtResource("3_ndnd3")
+material_override = ExtResource("8_074og")
 mesh = SubResource("ArrayMesh_wd83q")
 skeleton = NodePath("")
 
 [node name="Cube_008" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1, 0.8, 0.9)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_wafe7")
 skeleton = NodePath("")
 
 [node name="Cube_009" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1, 0.8, 4.1)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_b461x")
 skeleton = NodePath("")
 
 [node name="Cube_010" type="MeshInstance3D" parent="main"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 2, 0.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4517, 1.71817, 0.1)
 mesh = SubResource("ArrayMesh_s3efr")
 skeleton = NodePath("")
 
+[node name="poster" type="Sprite3D" parent="main/Cube_010"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.105)
+pixel_size = 0.0025
+script = ExtResource("12_w48qg")
+
+[node name="SubViewport" type="SubViewport" parent="main/Cube_010/poster"]
+handle_input_locally = false
+size = Vector2i(1216, 704)
+render_target_update_mode = 4
+
+[node name="main_2d" parent="main/Cube_010/poster/SubViewport" instance=ExtResource("13_ycdy4")]
+
 [node name="Cube_013" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3, -28)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_v7qi7")
 skeleton = NodePath("")
 
 [node name="Cube_017" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 6, -2.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_20tq1")
 skeleton = NodePath("")
 
 [node name="Cube_020" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2.6, -0.1)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_yjj8g")
 skeleton = NodePath("")
 
 [node name="Cube_021" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2.6, 0.1)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_nuprq")
 skeleton = NodePath("")
 
 [node name="Cube_022" type="MeshInstance3D" parent="main"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 3.2, 0.175)
-material_override = ExtResource("6_wi601")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4517, 2.91817, 0.175)
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_gtsqc")
 skeleton = NodePath("")
 
 [node name="Text" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -6.63625, 2.77825, 0.225)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_6yi1a")
 skeleton = NodePath("")
 
 [node name="Text_001" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -6.237, 2.342, 0.225)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_4h7ed")
 skeleton = NodePath("")
 
 [node name="Cube_025" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00816, 3.1, -6.00417)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_on6ny")
 skeleton = NodePath("")
 
 [node name="Cube_027" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.5, -26)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_21eiv")
 skeleton = NodePath("")
 
 [node name="Cube_028" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.5, -23)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_uoykq")
 skeleton = NodePath("")
 
@@ -6021,19 +6038,19 @@ skeleton = NodePath("")
 
 [node name="Cube_030" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.6, -21.9)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_6efpu")
 skeleton = NodePath("")
 
 [node name="Cube_031" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2.45, -21.9)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_3dd7p")
 skeleton = NodePath("")
 
 [node name="Cube_039" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0.75, -9.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_3xede")
 skeleton = NodePath("")
 
@@ -6044,288 +6061,289 @@ skeleton = NodePath("")
 
 [node name="Cube_041" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0.75, -18.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_xjxdf")
 skeleton = NodePath("")
 
 [node name="Cube_042" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.75, 2.05, -14)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_hl422")
 skeleton = NodePath("")
 
 [node name="Cube_043" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.75, 3.05, -14)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_up1im")
 skeleton = NodePath("")
 
 [node name="Cube_078" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.2, -18.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_o2xn6")
 skeleton = NodePath("")
 
 [node name="Cube_079" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.6, -18.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_ctyvk")
 skeleton = NodePath("")
 
 [node name="Cube_080" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.05, -18.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_0m4y4")
 skeleton = NodePath("")
 
 [node name="Cube_081" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.2, -12.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_wspj1")
 skeleton = NodePath("")
 
 [node name="Cube_082" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.6, -12.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_28av4")
 skeleton = NodePath("")
 
 [node name="Cube_083" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.05, -12.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_1apci")
 skeleton = NodePath("")
 
 [node name="Cube_084" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 1.2, -21.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_lk8pl")
 skeleton = NodePath("")
 
 [node name="Cube_085" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0.6, -21.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_r45rr")
 skeleton = NodePath("")
 
 [node name="Cube_086" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0.05, -21.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_v6053")
 skeleton = NodePath("")
 
 [node name="Cube_087" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.2, -7)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_huqvb")
 skeleton = NodePath("")
 
 [node name="Cube_088" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.6, -7)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_4v1gc")
 skeleton = NodePath("")
 
 [node name="Cube_089" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.05, -7)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_jh861")
 skeleton = NodePath("")
 
 [node name="Cube_090" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.2, -9.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_cj5it")
 skeleton = NodePath("")
 
 [node name="Cube_091" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.6, -9.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_lxd2p")
 skeleton = NodePath("")
 
 [node name="Cube_092" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.05, -9.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_smwc7")
 skeleton = NodePath("")
 
 [node name="Cube_093" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.2, -15.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_0ms1y")
 skeleton = NodePath("")
 
 [node name="Cube_094" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.6, -15.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_rry6h")
 skeleton = NodePath("")
 
 [node name="Cube_095" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.05, -15.5)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_uycvw")
 skeleton = NodePath("")
 
 [node name="Cube_117" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 1.05, -23)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_e5csj")
 skeleton = NodePath("")
 
 [node name="Cube_118" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.05, -21.05)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_4iyn1")
 skeleton = NodePath("")
 
 [node name="Cube_119" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.45, 1.05, -23)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_fkksx")
 skeleton = NodePath("")
 
 [node name="Cube_120" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.75, 3.45, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_7n0ey")
 skeleton = NodePath("")
 
 [node name="Cube_121" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.35, 3.45, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_uxnpb")
 skeleton = NodePath("")
 
 [node name="Cube_126" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.25, 4.95, -26.9)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_j4b1v")
 skeleton = NodePath("")
 
 [node name="Cube_127" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.45, 4.95, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_1y44a")
 skeleton = NodePath("")
 
 [node name="Cube_128" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65, 4.95, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_hhx16")
 skeleton = NodePath("")
 
 [node name="Cube_129" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.85, 4.95, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_fvno7")
 skeleton = NodePath("")
 
 [node name="Cube_122" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3, 3.8, -26.9)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_u4vre")
 skeleton = NodePath("")
 
 [node name="Cube_123" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.975, 4.65, -26.9)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_mv7xk")
 skeleton = NodePath("")
 
 [node name="Cube_124" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.05, 4.95, -26.9)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_1i6aa")
 skeleton = NodePath("")
 
 [node name="Cube_125" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35, 3.45, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_rgm5a")
 skeleton = NodePath("")
 
 [node name="Cube_130" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 3.45, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_qtvt0")
 skeleton = NodePath("")
 
 [node name="Cube_131" type="MeshInstance3D" parent="main"]
 transform = Transform3D(-1, -1.50996e-07, 0, 1.50996e-07, -1, 0, 0, 0, 1, -2.775, 5.25, -26.9)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_sagsx")
 skeleton = NodePath("")
 
 [node name="Cube_132" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, 4.95, -26.9)
-material_override = ExtResource("4_vipva")
+material_override = ExtResource("5_vivmo")
 mesh = SubResource("ArrayMesh_k8hwp")
 skeleton = NodePath("")
 
 [node name="Cube_133" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45, 4.95, -26.9)
-material_override = ExtResource("3_xofcu")
+material_override = ExtResource("4_w48qg")
 mesh = SubResource("ArrayMesh_umgio")
 skeleton = NodePath("")
 
 [node name="Cube_134" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1, 3.15, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_ko4k0")
 skeleton = NodePath("")
 
 [node name="Cube_135" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 2.8, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_x6tt8")
 skeleton = NodePath("")
 
 [node name="Cube_136" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1, 3, -26.9)
-material_override = ExtResource("5_et6uk")
+material_override = ExtResource("6_2cqfq")
 mesh = SubResource("ArrayMesh_5n4oq")
 skeleton = NodePath("")
 
 [node name="Text_002" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -4.33625, 3.37825, -26.975)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_m4iwm")
 skeleton = NodePath("")
 
 [node name="Text_003" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -3.937, 2.942, -26.975)
-material_override = ExtResource("6_wi601")
+material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_678t4")
 skeleton = NodePath("")
 
 [node name="Cube_032" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5, 3, -26)
-material_override = ExtResource("9_et6uk")
+material_override = ExtResource("11_getpj")
 mesh = SubResource("ArrayMesh_17nk3")
 skeleton = NodePath("")
 
 [node name="Cube_144" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 4.5, 3)
-material_override = ExtResource("3_vipva")
+visible = false
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_cf7gk")
 skeleton = NodePath("")
 
 [node name="Cube_145" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, -0.1, 3)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_h3f18")
 skeleton = NodePath("")
 
 [node name="Cube_146" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -0.1, 3)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_n0w3k")
 skeleton = NodePath("")
 
 [node name="Cube_147" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 4.5, 3)
-material_override = ExtResource("3_vipva")
+material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_uytbg")
 skeleton = NodePath("")
