@@ -1,10 +1,13 @@
 extends CharacterBody3D
 
+# Constants
 var mouse_sens = 0.3
-
 var walkSpeed = 3
 var runSpeed = 6
 var speed = walkSpeed
+
+# Variables
+var canMove = false
 
 # Capture mouse when game launches
 func _ready():
@@ -21,12 +24,12 @@ func _input(event):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# https://forum.godotengine.org/t/how-to-make-the-camera-moves-by-the-mouse-in-3d/24201/2
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and canMove:
 		$Pivot.rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
 		$Pivot/Camera3D.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
 
 # Called on every physics frame
-func _physics_process(delta):
+func _physics_process(_delta):
 
 	# Set player direction to Zero 
 	var direction = Vector3.ZERO
@@ -36,22 +39,22 @@ func _physics_process(delta):
 	var right = $Pivot.get_global_transform().basis.x
 
 	# Increase speed when shift is held
-	if Input.is_action_pressed("shift"):
+	if Input.is_action_pressed("shift") and canMove:
 		speed = runSpeed
 	else:
 		speed = walkSpeed
 
 	# Add up current player direction based on input 
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right") and canMove:
 		direction += right
 
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left") and canMove:
 		direction += -1 * right
 
-	if Input.is_action_pressed("back"):
+	if Input.is_action_pressed("back") and canMove:
 		direction += -1 * forward
 
-	if Input.is_action_pressed("forward"):
+	if Input.is_action_pressed("forward") and canMove:
 		direction += forward
 
 	# Calculate normalized velocity

@@ -3137,11 +3137,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o4aj0")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krhos"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x18cf"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_unsqh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2dxqy"]
 _surfaces = [{
-"aabb": AABB(-1.5, -1, -0.1, 3, 2, 0.2),
+"aabb": AABB(-1.6, -1, -0.1, 3.2, 2, 0.2),
 "format": 34896613377,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
@@ -3152,23 +3152,22 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s3efr"]
-resource_name = "main_Cube_010"
-lightmap_size_hint = Vector2i(86, 86)
+[sub_resource type="ArrayMesh" id="ArrayMesh_qide7"]
+resource_name = "larger_poster_Cube_010"
 _surfaces = [{
-"aabb": AABB(-1.5, -1, -0.1, 3, 2, 0.2),
-"attribute_data": PackedByteArray("wP6/PgAAgD/6gn4/+oJ+P6D/Hz/A/z8/v6BvPxJ3BD+g/x8/AACAP/qCfj8SdwQ/wP6/PsD/Pz+/oG8/+oJ+P8D+vz7A/z8/+oK+O/qCvjug/x8/AP//PtwRNz/cEfc+oP8fP8D/Pz/6gr473BH3PsD+vz4A//8+3BE3P/qCvjvA/r8+AP//Pr+gbz/cEfc+oP8fPwD9fz76gn4/+oK+O6D/Hz8A//8+v6BvP/qCvjvA/r8+AP1/PvqCfj/cEfc+wP6/PgD9fz76gr47EncEP6D/Hz8AAAAA3BE3P/qCfj+g/x8/AP1/PvqCvjv6gn4/wP6/PgAAAADcETc/EncEPwD5/z0A//8+AABAP9wRNz/A/r8+AP1/PjziTj/6gr47wP6/PgD//z4AAEA/+oK+OwD5/z0A/X8+POJOP9wRNz+g/x8/AP//Pl/QVz/6gr47oP8fPwAAgD+bsmY/3BE3P6D/Hz/A/z8/X9BXP9wRNz+g/x8/AP1/PpuyZj/6gr47"),
-"format": 34359742519,
+"aabb": AABB(-1.6, -1, -0.1, 3.2, 2, 0.2),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//5////+f/7//n/8/"),
+"format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_krhos"),
+"material": SubResource("StandardMaterial3D_x18cf"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AADAvwAAgL/IzMw9AADAvwAAgD/IzMy9AADAvwAAgD/IzMw9AADAvwAAgL/IzMy9AADAvwAAgL/IzMy9AADAPwAAgD/IzMy9AADAvwAAgD/IzMy9AADAPwAAgL/IzMy9AADAPwAAgL/IzMy9AADAPwAAgD/IzMw9AADAPwAAgD/IzMy9AADAPwAAgL/IzMw9AADAPwAAgL/IzMw9AADAvwAAgD/IzMw9AADAPwAAgD/IzMw9AADAvwAAgL/IzMw9AADAvwAAgL/IzMy9AADAPwAAgL/IzMw9AADAPwAAgL/IzMy9AADAvwAAgL/IzMw9AADAPwAAgD/IzMy9AADAvwAAgD/IzMw9AADAvwAAgD/IzMy9AADAPwAAgD/IzMw9AgAEgAGA/P8CAASAAYD8/wIABIABgPz/AgAEgAGA/P/+//7//3/+//7//v//f/7//v/+//9//v/+//7//3/+//r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//3//fwCA/v//f/9/AID+//9//38AgP7//3//fwCA/v8AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/")
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP+/AAD//////78AAP//AAD/v/////////+/VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_unsqh")
+shadow_mesh = SubResource("ArrayMesh_2dxqy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w63a"]
 
@@ -5249,7 +5248,7 @@ shadow_mesh = SubResource("ArrayMesh_h8d2x")
 
 [node name="main" type="Node3D" node_paths=PackedStringArray("gc_2d")]
 script = ExtResource("1_dg77c")
-gc_2d = NodePath("main/Cube_010/poster/SubViewport/main_2d")
+gc_2d = NodePath("main/Cube_011/poster/SubViewport/main_2d")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aas03")
@@ -5279,7 +5278,6 @@ shape = SubResource("CapsuleShape3D_wiwsh")
 
 [node name="roof" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 6.5, -17)
-visible = false
 material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_rba8x")
 skeleton = NodePath("")
@@ -5954,22 +5952,22 @@ material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_b461x")
 skeleton = NodePath("")
 
-[node name="Cube_010" type="MeshInstance3D" parent="main"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4517, 1.71817, 0.1)
-mesh = SubResource("ArrayMesh_s3efr")
+[node name="Cube_011" type="MeshInstance3D" parent="main"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.452, 1.718, 0.1)
+mesh = SubResource("ArrayMesh_qide7")
 skeleton = NodePath("")
 
-[node name="poster" type="Sprite3D" parent="main/Cube_010"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.105)
+[node name="poster" type="Sprite3D" parent="main/Cube_011"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000312805, 0.000169635, 0.105)
 pixel_size = 0.0025
 script = ExtResource("12_w48qg")
 
-[node name="SubViewport" type="SubViewport" parent="main/Cube_010/poster"]
+[node name="SubViewport" type="SubViewport" parent="main/Cube_011/poster"]
 handle_input_locally = false
 size = Vector2i(1216, 704)
 render_target_update_mode = 4
 
-[node name="main_2d" parent="main/Cube_010/poster/SubViewport" instance=ExtResource("13_ycdy4")]
+[node name="main_2d" parent="main/Cube_011/poster/SubViewport" instance=ExtResource("13_ycdy4")]
 
 [node name="Cube_013" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3, -28)
@@ -6325,7 +6323,6 @@ skeleton = NodePath("")
 
 [node name="Cube_144" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 4.5, 3)
-visible = false
 material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_cf7gk")
 skeleton = NodePath("")

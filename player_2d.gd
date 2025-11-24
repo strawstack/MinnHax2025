@@ -2,7 +2,9 @@ extends CharacterBody2D
 
 # Constants
 var fps_scale = 60
-var speed = 3 * 64 * fps_scale
+var walkSpeed = 3 * 64 * fps_scale
+var runSpeed = 5 * 64 * fps_scale
+var speed = walkSpeed
 var jump_force = -1 * 4 * 64 * fps_scale
 var gravity = 10 * 64 * fps_scale
 
@@ -21,6 +23,10 @@ func _ready():
 
 func _process(delta):
 	var vec = Vector2.ZERO
+
+	speed = walkSpeed
+	if Input.is_action_pressed("shift"):
+		speed = runSpeed
 
 	if Input.is_action_pressed("right") and canMove:
 		sprite.set_flip_h(false)

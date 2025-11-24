@@ -8,12 +8,15 @@ var once_start_button = true
 var once_dunk = true
 var isShowDunk = false
 
+var gc
+
 func _ready():
+	gc = get_tree().get_root().get_node("main")
 	player = $Player
 	camera = $Camera2D
 	animation = $AnimationPlayer
 
-func _on_start_button_pressed():
+func wake_up_pressed():
 	if once_start_button:
 		once_start_button = false
 		animation.play("fade_out_ui")
@@ -39,9 +42,13 @@ func beginDunk():
 	animation.play("player_dunk")
 
 func whiteOut():
-	print("white out, swap to poster, free 3D scene")
+	animation.play("white_out")
 
-func _process(delta):
+func setPoster():
+	print("TODO - set up poster")
+	animation.play("reverse_white_out")
+
+func _process(_delta):
 	if Input.is_action_just_pressed("space") and isShowDunk and once_dunk:
 		once_dunk = false
 		beginDunk()
@@ -55,3 +62,9 @@ func _on_animation_player_animation_finished(anim_name):
 	
 	if anim_name == "player_dunk":
 		whiteOut()
+	
+	if anim_name == "white_out":
+		setPoster()
+	
+	if anim_name == "reverse_white_out":
+		gc.playerCanMove()

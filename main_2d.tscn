@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cyniy5kyw6wy5"]
+[gd_scene load_steps=42 format=3 uid="uid://cyniy5kyw6wy5"]
 
 [ext_resource type="Texture2D" uid="uid://d3np33y0fp16a" path="res://images/mountain_back.png" id="1_q6avo"]
 [ext_resource type="Script" uid="uid://cdb7ddkwtjwf" path="res://gc_main_2d.gd" id="1_sxeyp"]
@@ -13,21 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dian7j7fogqs4" path="res://images/smoke.png" id="9_ahvsh"]
 [ext_resource type="Texture2D" uid="uid://d1136lp0vy0rw" path="res://images/smoke_large.png" id="10_8c7tm"]
 [ext_resource type="Script" uid="uid://cnmnl3xy2xcvh" path="res://player_2d.gd" id="10_coknk"]
-
-[sub_resource type="Animation" id="Animation_sxeyp"]
-resource_name = "fade_out_ui"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MainMenu:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_coknk"]
 length = 0.001
@@ -79,20 +64,32 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="Animation" id="Animation_exwtt"]
-resource_name = "show_dunk"
+[sub_resource type="Animation" id="Animation_sxeyp"]
+resource_name = "fade_out_ui"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DunkUI:modulate")
+tracks/0/path = NodePath("MainMenu:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_w0t24"]
@@ -110,27 +107,59 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, 48)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_exwtt"]
-_data = {
-&"RESET": SubResource("Animation_coknk"),
-&"fade_out_ui": SubResource("Animation_sxeyp"),
-&"player_dunk": SubResource("Animation_w0t24"),
-&"show_dunk": SubResource("Animation_exwtt")
-}
-
-[sub_resource type="Animation" id="Animation_twkok"]
-resource_name = "camera_zoom"
+[sub_resource type="Animation" id="Animation_exwtt"]
+resource_name = "show_dunk"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:zoom")
+tracks/0/path = NodePath("DunkUI:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(2, 2)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7arjl"]
+resource_name = "white_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ahvsh"]
+resource_name = "reverse_white_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_exwtt"]
+_data = {
+&"RESET": SubResource("Animation_coknk"),
+&"fade_out_ui": SubResource("Animation_sxeyp"),
+&"player_dunk": SubResource("Animation_w0t24"),
+&"reverse_white_out": SubResource("Animation_ahvsh"),
+&"show_dunk": SubResource("Animation_exwtt"),
+&"white_out": SubResource("Animation_7arjl")
 }
 
 [sub_resource type="Animation" id="Animation_hlidw"]
@@ -148,6 +177,21 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_twkok"]
+resource_name = "camera_zoom"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w0t24"]
 _data = {
 &"RESET": SubResource("Animation_hlidw"),
@@ -159,6 +203,104 @@ radius = 24.0
 height = 96.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8c7tm"]
+
+[sub_resource type="Animation" id="Animation_bnpno"]
+resource_name = "sky_cloud"
+length = 12.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -60), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ingrd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_25d1e"]
+_data = {
+&"RESET": SubResource("Animation_ingrd"),
+&"sky_cloud": SubResource("Animation_bnpno")
+}
+
+[sub_resource type="Animation" id="Animation_kwd53"]
+resource_name = "roof_cloud"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmokeLarge2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(520, 424), Vector2(552, 424), Vector2(520, 424)]
+}
+
+[sub_resource type="Animation" id="Animation_jq4el"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmokeLarge2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(520, 424)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bnpno"]
+_data = {
+&"RESET": SubResource("Animation_jq4el"),
+&"roof_cloud": SubResource("Animation_kwd53")
+}
+
+[sub_resource type="Animation" id="Animation_8c7tm"]
+resource_name = "stone_cloud"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmokeLarge3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(608, 520), Vector2(608, 504), Vector2(608, 520)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kwd53"]
+_data = {
+&"stone_cloud": SubResource("Animation_8c7tm")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
 bg_color = Color(0.282353, 0.792157, 0.894118, 1)
@@ -323,24 +465,44 @@ color = Color(0, 0.588235, 0.780392, 0.501961)
 
 [node name="Smoke" type="Node2D" parent="."]
 
-[node name="Smoke" type="Sprite2D" parent="Smoke"]
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Smoke"]
+libraries = {
+&"": SubResource("AnimationLibrary_25d1e")
+}
+autoplay = "sky_cloud"
+
+[node name="Node2D" type="Node2D" parent="Smoke"]
+
+[node name="Smoke" type="Sprite2D" parent="Smoke/Node2D"]
 position = Vector2(560, 296)
 texture = ExtResource("9_ahvsh")
 
-[node name="Smoke2" type="Sprite2D" parent="Smoke"]
+[node name="Smoke2" type="Sprite2D" parent="Smoke/Node2D"]
 position = Vector2(680, 120)
 texture = ExtResource("9_ahvsh")
 
-[node name="SmokeLarge" type="Sprite2D" parent="Smoke"]
+[node name="SmokeLarge" type="Sprite2D" parent="Smoke/Node2D"]
 position = Vector2(624, 208)
 texture = ExtResource("10_8c7tm")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Smoke"]
+libraries = {
+&"": SubResource("AnimationLibrary_bnpno")
+}
+autoplay = "roof_cloud"
 
 [node name="SmokeLarge2" type="Sprite2D" parent="Smoke"]
 position = Vector2(520, 424)
 texture = ExtResource("10_8c7tm")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Smoke"]
+libraries = {
+&"": SubResource("AnimationLibrary_kwd53")
+}
+autoplay = "stone_cloud"
+
 [node name="SmokeLarge3" type="Sprite2D" parent="Smoke"]
-position = Vector2(608, 512)
+position = Vector2(608, 520)
 texture = ExtResource("10_8c7tm")
 
 [node name="Points" type="Node2D" parent="."]
@@ -388,14 +550,14 @@ Spacebar - Action
 Mouse - Look"
 
 [node name="StartButton" type="Button" parent="MainMenu"]
-offset_left = 512.0
+offset_left = 384.0
 offset_top = 960.0
-offset_right = 704.0
+offset_right = 831.0
 offset_bottom = 1024.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_4c57u")
-text = "Wake Up!"
+text = "\"spacebar\" to wake up!"
 
 [node name="invisible_walls" type="Node2D" parent="."]
 
@@ -452,17 +614,22 @@ shape = SubResource("RectangleShape2D_ahvsh")
 modulate = Color(1, 1, 1, 0)
 
 [node name="Message" type="Label" parent="DunkUI"]
-offset_left = 1320.0
+offset_left = 1280.0
 offset_top = 584.0
-offset_right = 1655.0
+offset_right = 1654.0
 offset_bottom = 677.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
-text = "Press \"space\" to dunk"
+text = "\"spaceabar\" to wake up!"
 horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 40.0
+offset_right = 2432.0
+offset_bottom = 1384.0
+color = Color(1, 1, 1, 0)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Camera2D" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="MainMenu/StartButton" to="." method="_on_start_button_pressed"]

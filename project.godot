@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MinnHax2025"
-run/main_scene="uid://cyniy5kyw6wy5"
+run/main_scene="uid://l5br0xxi4hrv"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [display]
