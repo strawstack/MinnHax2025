@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://cyniy5kyw6wy5"]
+[gd_scene load_steps=32 format=3 uid="uid://cyniy5kyw6wy5"]
 
 [ext_resource type="Texture2D" uid="uid://d3np33y0fp16a" path="res://images/mountain_back.png" id="1_q6avo"]
 [ext_resource type="Script" uid="uid://cdb7ddkwtjwf" path="res://gc_main_2d.gd" id="1_sxeyp"]
+[ext_resource type="Script" uid="uid://gcb4c7heupmm" path="res://my_camera.gd" id="2_exwtt"]
 [ext_resource type="Texture2D" uid="uid://c0mdxquy6v5sl" path="res://images/mountain_front.png" id="2_sxeyp"]
 [ext_resource type="Texture2D" uid="uid://bvm7j2tyrrjhf" path="res://images/ice_floor.png" id="3_coknk"]
 [ext_resource type="Texture2D" uid="uid://cl4ciordjkjhd" path="res://images/sauna_room.png" id="4_exwtt"]
@@ -42,16 +43,122 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DunkUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/Sprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_exwtt"]
+resource_name = "show_dunk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DunkUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w0t24"]
+resource_name = "player_dunk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 48)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_exwtt"]
 _data = {
 &"RESET": SubResource("Animation_coknk"),
-&"fade_out_ui": SubResource("Animation_sxeyp")
+&"fade_out_ui": SubResource("Animation_sxeyp"),
+&"player_dunk": SubResource("Animation_w0t24"),
+&"show_dunk": SubResource("Animation_exwtt")
+}
+
+[sub_resource type="Animation" id="Animation_twkok"]
+resource_name = "camera_zoom"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_hlidw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w0t24"]
+_data = {
+&"RESET": SubResource("Animation_hlidw"),
+&"camera_zoom": SubResource("Animation_twkok")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxeyp"]
 radius = 24.0
 height = 96.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8c7tm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
 bg_color = Color(0.282353, 0.792157, 0.894118, 1)
@@ -91,6 +198,12 @@ limit_left = 0
 limit_top = 48
 limit_right = 2432
 limit_bottom = 1344
+script = ExtResource("2_exwtt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_w0t24")
+}
 
 [node name="BackgroundArt" type="Node2D" parent="."]
 
@@ -184,6 +297,7 @@ texture = ExtResource("7_w0t24")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(480, 512)
+collision_mask = 6
 script = ExtResource("10_coknk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
@@ -192,6 +306,13 @@ texture = ExtResource("8_7arjl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_sxeyp")
+
+[node name="Area2D" type="Area2D" parent="Player"]
+position = Vector2(0, 56)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+shape = SubResource("RectangleShape2D_8c7tm")
 
 [node name="WaterOverlay" type="ColorRect" parent="."]
 offset_left = 1664.0
@@ -222,9 +343,12 @@ texture = ExtResource("10_8c7tm")
 position = Vector2(608, 512)
 texture = ExtResource("10_8c7tm")
 
-[node name="CameraPoints" type="Node2D" parent="."]
+[node name="Points" type="Node2D" parent="."]
 
-[node name="CAMERA_START" type="Node2D" parent="CameraPoints"]
+[node name="PLAYER_START" type="Node2D" parent="Points"]
+position = Vector2(480, 512)
+
+[node name="CAMERA_START" type="Node2D" parent="Points"]
 position = Vector2(608, 992)
 
 [node name="MainMenu" type="Node2D" parent="."]
@@ -277,45 +401,68 @@ text = "Wake Up!"
 
 [node name="ice_StaticBody2D" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(832, 608)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/ice_StaticBody2D"]
 shape = SubResource("RectangleShape2D_coknk")
 
 [node name="ice_StaticBody2D2" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(2240, 608)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/ice_StaticBody2D2"]
 shape = SubResource("RectangleShape2D_exwtt")
 
-[node name="ice_under_StaticBody2D3" type="StaticBody2D" parent="invisible_walls"]
+[node name="under_StaticBody2D3" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(1856, 736)
+collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/ice_under_StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/under_StaticBody2D3"]
 shape = SubResource("RectangleShape2D_w0t24")
 
 [node name="wall_StaticBody2D3" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(1632, 704)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/wall_StaticBody2D3"]
 shape = SubResource("RectangleShape2D_twkok")
 
 [node name="wall_StaticBody2D4" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(2080, 704)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/wall_StaticBody2D4"]
 shape = SubResource("RectangleShape2D_hlidw")
 
 [node name="wall_StaticBody2D5" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(368, 416)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/wall_StaticBody2D5"]
 shape = SubResource("RectangleShape2D_7arjl")
 
 [node name="wall_StaticBody2D6" type="StaticBody2D" parent="invisible_walls"]
 position = Vector2(2400, 416)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_walls/wall_StaticBody2D6"]
 shape = SubResource("RectangleShape2D_ahvsh")
 
+[node name="DunkUI" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Message" type="Label" parent="DunkUI"]
+offset_left = 1320.0
+offset_top = 584.0
+offset_right = 1655.0
+offset_bottom = 677.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Press \"space\" to dunk"
+horizontal_alignment = 2
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Camera2D" method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="MainMenu/StartButton" to="." method="_on_start_button_pressed"]

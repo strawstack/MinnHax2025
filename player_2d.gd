@@ -1,31 +1,57 @@
 extends CharacterBody2D
 
-var speed = 10000
-var jump = 10000
-var gravity = 5000
+# Constants
+var fps_scale = 60
+var speed = 3 * 64 * fps_scale
+var jump_force = -1 * 4 * 64 * fps_scale
+var gravity = 10 * 64 * fps_scale
 
+# Tracking variables
+var jump_velocity = 0
+var canJump = false
+var canMove = false
+
+# Refs
+var gc_2d
 var sprite
 
 func _ready():
+	gc_2d = get_tree().get_root().get_node("main_2d")
 	sprite = $Sprite2D
-
 
 func _process(delta):
 	var vec = Vector2.ZERO
-	
-	if Input.is_action_pressed("right"):
+
+	if Input.is_action_pressed("right") and canMove:
 		sprite.set_flip_h(false)
-		vec.x = delta * speed
-	
-	if Input.is_action_pressed("left"):
+		vec.x = speed
+
+	if Input.is_action_pressed("left") and canMove:
 		sprite.set_flip_h(true)
-		vec.x = delta * -1 * speed
+		vec.x = -1 * speed
+
+	if Input.is_action_just_pressed("space") and canMove:
+		if canJump: 
+			canJump = false
+			jump_velocity = jump_force
+
+	vec.y = jump_velocity
+	jump_velocity += gravity * delta
+	if canJump:
+		jump_velocity = 0
 	
-	if Input.is_action_just_pressed("space"):
-		vec.y = -1 * jump
-	
-	vec.y += gravity
-	
-	velocity = vec
-	print(velocity)
+	velocity = vec * delta
 	move_and_slide()
+
+func _on_area_2d_body_entered(body):
+	var isIce = body.name.contains("ice_")
+	var isUnder = body.name.contains("under_")
+	if isIce:
+		canJump = true
+	if isUnder:
+		gc_2d.showDunk()
+
+func _on_area_2d_body_exited(body):
+	var isIce = body.name.contains("ice_")
+	if isIce:
+		canJump = false

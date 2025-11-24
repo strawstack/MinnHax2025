@@ -4,6 +4,9 @@ var player
 var camera
 var animation 
 
+var once_start_button = true
+var once_dunk = true
+var isShowDunk = false
 
 func _ready():
 	player = $Player
@@ -11,10 +14,13 @@ func _ready():
 	animation = $AnimationPlayer
 
 func _on_start_button_pressed():
-	animation.play("fade_out_ui")
+	if once_start_button:
+		once_start_button = false
+		animation.play("fade_out_ui")
 
 func tween_complete():
 	camera.reparent(player)
+	player.canMove = true
 
 func camera_to_player_tween():
 	var to = $Player.position
@@ -22,6 +28,30 @@ func camera_to_player_tween():
 	tween.tween_property(camera, "position", to, 2.0)
 	tween.tween_callback(tween_complete)
 
+func showDunk():
+	await get_tree().create_timer(1.0).timeout
+	animation.play("show_dunk")
+
+func beginDunk():
+	player.canMove = false
+	camera.zoom()
+	await camera.animation_completed
+	animation.play("player_dunk")
+
+func whiteOut():
+	print("white out, swap to poster, free 3D scene")
+
+func _process(delta):
+	if Input.is_action_just_pressed("space") and isShowDunk and once_dunk:
+		once_dunk = false
+		beginDunk()
+
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out_ui":
 		camera_to_player_tween()
+
+	if anim_name == "show_dunk":
+		isShowDunk = true
+	
+	if anim_name == "player_dunk":
+		whiteOut()
