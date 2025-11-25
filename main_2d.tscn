@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cyniy5kyw6wy5"]
+[gd_scene load_steps=44 format=3 uid="uid://cyniy5kyw6wy5"]
 
 [ext_resource type="Texture2D" uid="uid://d3np33y0fp16a" path="res://images/mountain_back.png" id="1_q6avo"]
 [ext_resource type="Script" uid="uid://cdb7ddkwtjwf" path="res://gc_main_2d.gd" id="1_sxeyp"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bd1rkq3h2p4tg" path="res://images/door_close.png" id="6_hlidw"]
 [ext_resource type="Texture2D" uid="uid://b3c4v1waoftlk" path="res://images/door_open.png" id="7_w0t24"]
 [ext_resource type="Texture2D" uid="uid://dt66cnlned1dv" path="res://images/player.png" id="8_7arjl"]
+[ext_resource type="Script" uid="uid://q7t3frkxg6fj" path="res://door.gd" id="8_twkok"]
 [ext_resource type="Texture2D" uid="uid://dian7j7fogqs4" path="res://images/smoke.png" id="9_ahvsh"]
 [ext_resource type="Texture2D" uid="uid://d1136lp0vy0rw" path="res://images/smoke_large.png" id="10_8c7tm"]
 [ext_resource type="Script" uid="uid://cnmnl3xy2xcvh" path="res://player_2d.gd" id="10_coknk"]
@@ -107,6 +108,21 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, 48)]
 }
 
+[sub_resource type="Animation" id="Animation_ahvsh"]
+resource_name = "reverse_white_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_exwtt"]
 resource_name = "show_dunk"
 tracks/0/type = "value"
@@ -135,21 +151,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ahvsh"]
-resource_name = "reverse_white_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_exwtt"]
@@ -198,11 +199,29 @@ _data = {
 &"camera_zoom": SubResource("Animation_twkok")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gedy8"]
+size = Vector2(32, 144)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxeyp"]
 radius = 24.0
 height = 96.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8c7tm"]
+
+[sub_resource type="Animation" id="Animation_ingrd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_bnpno"]
 resource_name = "sky_cloud"
@@ -221,25 +240,25 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -60), Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ingrd"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_25d1e"]
+_data = {
+&"RESET": SubResource("Animation_ingrd"),
+&"sky_cloud": SubResource("Animation_bnpno")
+}
+
+[sub_resource type="Animation" id="Animation_jq4el"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
+tracks/0/path = NodePath("SmokeLarge2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_25d1e"]
-_data = {
-&"RESET": SubResource("Animation_ingrd"),
-&"sky_cloud": SubResource("Animation_bnpno")
+"values": [Vector2(520, 424)]
 }
 
 [sub_resource type="Animation" id="Animation_kwd53"]
@@ -257,21 +276,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(520, 424), Vector2(552, 424), Vector2(520, 424)]
-}
-
-[sub_resource type="Animation" id="Animation_jq4el"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SmokeLarge2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(520, 424)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bnpno"]
@@ -326,8 +330,9 @@ size = Vector2(64, 320)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahvsh"]
 size = Vector2(64, 320)
 
-[node name="main_2d" type="Node2D"]
+[node name="main_2d" type="Node2D" node_paths=PackedStringArray("door")]
 script = ExtResource("1_sxeyp")
+door = NodePath("BackgroundArt/Door")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -429,11 +434,23 @@ texture = ExtResource("4_exwtt")
 position = Vector2(608, 544)
 texture = ExtResource("5_twkok")
 
-[node name="DoorClose" type="Sprite2D" parent="BackgroundArt"]
+[node name="Door" type="Node2D" parent="BackgroundArt"]
+script = ExtResource("8_twkok")
+
+[node name="Area2D" type="Area2D" parent="BackgroundArt/Door"]
+position = Vector2(698, 442)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundArt/Door/Area2D"]
+position = Vector2(6, 62)
+shape = SubResource("RectangleShape2D_gedy8")
+
+[node name="DoorClose" type="Sprite2D" parent="BackgroundArt/Door"]
 position = Vector2(701, 504)
 texture = ExtResource("6_hlidw")
 
-[node name="DoorOpen" type="Sprite2D" parent="BackgroundArt"]
+[node name="DoorOpen" type="Sprite2D" parent="BackgroundArt/Door"]
+visible = false
 position = Vector2(747, 504)
 texture = ExtResource("7_w0t24")
 
@@ -623,6 +640,50 @@ theme_override_font_sizes/font_size = 32
 text = "\"spaceabar\" to wake up!"
 horizontal_alignment = 2
 
+[node name="Poster" type="Node2D" parent="."]
+visible = false
+
+[node name="Title" type="Label" parent="Poster"]
+offset_left = 384.0
+offset_top = 248.0
+offset_right = 1181.0
+offset_bottom = 825.0
+theme_override_colors/font_color = Color(0.282353, 0.792157, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 82
+text = "  HipHop Experience
+Tonight Only
+
+<== This way"
+
+[node name="Rotate" type="Node2D" parent="Poster"]
+position = Vector2(80, 616)
+rotation = -0.993092
+
+[node name="Title2" type="Label" parent="Poster/Rotate"]
+offset_right = 754.0
+offset_bottom = 577.0
+theme_override_colors/font_color = Color(0.282353, 0.792157, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 82
+text = "Polar Plunge "
+
+[node name="Controls" type="Label" parent="Poster"]
+offset_left = 712.0
+offset_top = 480.0
+offset_right = 1032.0
+offset_bottom = 669.0
+theme_override_colors/font_color = Color(0.282353, 0.792157, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "Remember...
+Mouse - Look
+WASD - Move
+"
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_top = 40.0
 offset_right = 2432.0
@@ -631,5 +692,6 @@ color = Color(1, 1, 1, 0)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Camera2D" method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="BackgroundArt/Door/Area2D" to="BackgroundArt/Door" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_area_2d_body_exited"]

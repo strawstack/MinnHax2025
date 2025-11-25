@@ -10,11 +10,16 @@ var isShowDunk = false
 
 var gc
 
+@export var door: Node2D
+
 func _ready():
 	gc = get_tree().get_root().get_node("main")
 	player = $Player
 	camera = $Camera2D
 	animation = $AnimationPlayer
+
+func toggleDoor(open):
+	door.toggleDoor(open)
 
 func wake_up_pressed():
 	if once_start_button:
@@ -45,7 +50,12 @@ func whiteOut():
 	animation.play("white_out")
 
 func setPoster():
-	print("TODO - set up poster")
+	toggleDoor(false) # Close the door
+	camera.set_zoom(Vector2.ONE) # Zoom camera back out
+	player.get_node("Sprite2D").set_flip_h(false) # Face right
+	player.get_node("Sprite2D").set_offset(Vector2.ZERO) # Reverse dunk offset
+	player.position = $Points/PLAYER_START.position # Move player to start
+	$Poster.visible = true
 	animation.play("reverse_white_out")
 
 func _process(_delta):
