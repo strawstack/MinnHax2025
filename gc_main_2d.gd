@@ -17,16 +17,31 @@ func _ready():
 	player = $Player
 	camera = $Camera2D
 	animation = $AnimationPlayer
+	gc.playMusic("lo_fi_loop", true)
+
+func reset2D():
+	$DunkUI.set_modulate(Color(1,1,1,1))
+	isShowDunk = false
+	$Poster.visible = false
+	camera.reparent(self)
+	camera.position = $Points/CAMERA_START.position
+	once_dunk = true
+	toggleDoor(false)
+	$MainMenu.set_modulate(Color(1,1,1,1))
+	$MainMenu/Title.visible = false
+	$MainMenu/Title_Thanks.visible = true
 
 func toggleDoor(open):
 	door.toggleDoor(open)
 
 func wake_up_pressed():
+	gc.playMusic("winter_wind", true)
 	if once_start_button:
 		once_start_button = false
 		animation.play("fade_out_ui")
 
 func tween_complete():
+	gc.playMusic("lo_fi_loop", false)
 	camera.reparent(player)
 	player.canMove = true
 
@@ -56,6 +71,7 @@ func setPoster():
 	player.get_node("Sprite2D").set_offset(Vector2.ZERO) # Reverse dunk offset
 	player.position = $Points/PLAYER_START.position # Move player to start
 	$Poster.visible = true
+	gc.playMusic("winter_wind", false)
 	animation.play("reverse_white_out")
 
 func _process(_delta):
@@ -77,4 +93,5 @@ func _on_animation_player_animation_finished(anim_name):
 		setPoster()
 	
 	if anim_name == "reverse_white_out":
+		gc.playMusic("dog_bark", true)
 		gc.playerCanMove()

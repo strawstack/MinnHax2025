@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cyniy5kyw6wy5"]
+[gd_scene load_steps=46 format=3 uid="uid://cyniy5kyw6wy5"]
 
 [ext_resource type="Texture2D" uid="uid://d3np33y0fp16a" path="res://images/mountain_back.png" id="1_q6avo"]
 [ext_resource type="Script" uid="uid://cdb7ddkwtjwf" path="res://gc_main_2d.gd" id="1_sxeyp"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dian7j7fogqs4" path="res://images/smoke.png" id="9_ahvsh"]
 [ext_resource type="Texture2D" uid="uid://d1136lp0vy0rw" path="res://images/smoke_large.png" id="10_8c7tm"]
 [ext_resource type="Script" uid="uid://cnmnl3xy2xcvh" path="res://player_2d.gd" id="10_coknk"]
+[ext_resource type="Script" uid="uid://bev865c43lkvr" path="res://water.gd" id="11_hlidw"]
 
 [sub_resource type="Animation" id="Animation_coknk"]
 length = 0.001
@@ -120,7 +121,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(0.282353, 0.792157, 0.894118, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_exwtt"]
@@ -150,7 +151,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(0.282353, 0.792157, 0.894118, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_exwtt"]
@@ -201,6 +202,9 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gedy8"]
 size = Vector2(32, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwd53"]
+size = Vector2(384, 64)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxeyp"]
 radius = 24.0
@@ -454,6 +458,17 @@ visible = false
 position = Vector2(747, 504)
 texture = ExtResource("7_w0t24")
 
+[node name="Water" type="Node2D" parent="BackgroundArt"]
+script = ExtResource("11_hlidw")
+
+[node name="Area2D" type="Area2D" parent="BackgroundArt/Water"]
+position = Vector2(1736, 672)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundArt/Water/Area2D"]
+position = Vector2(120, 0)
+shape = SubResource("RectangleShape2D_kwd53")
+
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(480, 512)
 collision_mask = 6
@@ -542,6 +557,18 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 82
 text = "New Snow Plunge"
+
+[node name="Title_Thanks" type="Label" parent="MainMenu"]
+visible = false
+offset_left = 256.0
+offset_top = 800.0
+offset_right = 962.0
+offset_bottom = 913.0
+theme_override_colors/font_color = Color(0.282353, 0.792157, 0.894118, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 82
+text = "Thanks for Playing !!"
 
 [node name="CreatedBy" type="Label" parent="MainMenu"]
 offset_left = 864.0
@@ -693,5 +720,6 @@ color = Color(1, 1, 1, 0)
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Camera2D" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="BackgroundArt/Door/Area2D" to="BackgroundArt/Door" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="BackgroundArt/Water/Area2D" to="BackgroundArt/Water" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_area_2d_body_exited"]
