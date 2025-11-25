@@ -21,6 +21,11 @@ func _ready():
 	gc_2d = get_tree().get_root().get_node("main").gc_2d
 	sprite = $Sprite2D
 
+func resetPlayer():
+	canMove = false
+	jump_velocity = 0
+	canJump = true
+
 func _process(delta):
 	var vec = Vector2.ZERO
 

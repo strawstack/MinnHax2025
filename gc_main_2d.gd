@@ -11,6 +11,7 @@ var isShowDunk = false
 var gc
 
 @export var door: Node2D
+@export var water: Node2D
 
 func _ready():
 	gc = get_tree().get_root().get_node("main")
@@ -20,16 +21,19 @@ func _ready():
 	gc.playMusic("lo_fi_loop", true)
 
 func reset2D():
-	$DunkUI.set_modulate(Color(1,1,1,1))
+	$DunkUI.set_modulate(Color(1,1,1,0))
 	isShowDunk = false
+	once_dunk = true
 	$Poster.visible = false
 	camera.reparent(self)
 	camera.position = $Points/CAMERA_START.position
-	once_dunk = true
 	toggleDoor(false)
 	$MainMenu.set_modulate(Color(1,1,1,1))
 	$MainMenu/Title.visible = false
 	$MainMenu/Title_Thanks.visible = true
+	player.resetPlayer()
+	door.onceOpen = true
+	water.onceEnter = true
 
 func toggleDoor(open):
 	door.toggleDoor(open)

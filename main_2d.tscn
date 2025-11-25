@@ -334,9 +334,10 @@ size = Vector2(64, 320)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahvsh"]
 size = Vector2(64, 320)
 
-[node name="main_2d" type="Node2D" node_paths=PackedStringArray("door")]
+[node name="main_2d" type="Node2D" node_paths=PackedStringArray("door", "water")]
 script = ExtResource("1_sxeyp")
 door = NodePath("BackgroundArt/Door")
+water = NodePath("BackgroundArt/Water")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
