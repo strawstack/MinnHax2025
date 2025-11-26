@@ -582,7 +582,7 @@ text = "Made by
 Richard & Yu"
 horizontal_alignment = 2
 
-[node name="CreatedBy2" type="Label" parent="MainMenu"]
+[node name="Controls" type="Label" parent="MainMenu"]
 offset_left = 32.0
 offset_top = 1131.0
 offset_right = 352.0

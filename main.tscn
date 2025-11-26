@@ -26,7 +26,7 @@
 
 [sub_resource type="Animation" id="Animation_w48qg"]
 resource_name = "LeBooBoo_Float"
-length = 0.6122
+length = 1.2244
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -35,7 +35,7 @@ tracks/0/path = NodePath("main/LeBooBoo:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3061, 0.6122),
+"times": PackedFloat32Array(0, 0.6122, 1.2244),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, 0.2, 0)]
@@ -6634,13 +6634,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h8d2x")
 
-[node name="main" type="Node3D" node_paths=PackedStringArray("gc_2d", "song", "dogs", "mlight", "lebooboo")]
+[node name="main" type="Node3D" node_paths=PackedStringArray("gc_2d", "song", "dogs")]
 script = ExtResource("1_dg77c")
 gc_2d = NodePath("main/Cube_011/poster/SubViewport/main_2d")
 song = NodePath("main/club_zones/Cube_190/song")
 dogs = NodePath("main/club_zones/Cube_191/dogs")
-mlight = NodePath("main/Cube_031/MicLight")
-lebooboo = NodePath("main/LeBooBoo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -7751,10 +7749,6 @@ material_override = ExtResource("7_yaehf")
 mesh = SubResource("ArrayMesh_3dd7p")
 skeleton = NodePath("")
 
-[node name="MicLight" type="OmniLight3D" parent="main/Cube_031"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.344815, 0.22751)
-light_energy = 0.2
-
 [node name="Cube_039" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0.75, -9.5)
 material_override = ExtResource("3_ycdy4")
@@ -8030,7 +8024,7 @@ material_override = ExtResource("11_getpj")
 mesh = SubResource("ArrayMesh_17nk3")
 skeleton = NodePath("")
 
-[node name="Cube_144" type="MeshInstance3D" parent="main"]
+[node name="endWall" type="MeshInstance3D" parent="main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 4.5, 3)
 material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_cf7gk")
@@ -8053,6 +8047,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 4.5, 3)
 material_override = ExtResource("3_ycdy4")
 mesh = SubResource("ArrayMesh_uytbg")
 skeleton = NodePath("")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.27799, 1.85985, -6.99903)
+text = "Turn volume up!
+In the club ==>"
+horizontal_alignment = 0
 
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="finished" from="AudioStream/song" to="." method="_on_song_finished"]
