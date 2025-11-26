@@ -7,16 +7,28 @@ var once_wake_up = true
 @export var gc_2d: Node2D
 @export var song: Area3D
 @export var dogs: Area3D
+@export var mlight: OmniLight3D
+@export var lebooboo: Node3D
 
 var player
+# var spectrumAnalyzer
 
 func _ready():
+	# spectrumAnalyzer = AudioServer.get_bus_effect_instance(0, 0)
 	player = $Player
 
 func playerCanMove():
 	player.canMove = true
 
+func lightLevel_Unused():
+	# var amp = spectrumAnalyzer.get_magnitude_for_frequency_range(0, 44000)
+	# micLight.set_param(0, amp.x)
+	pass
+
 func _process(_delta):
+	# Set light level
+	mlight.set_param(0, 0.3 - lebooboo.position.y + 0.2)
+
 	if Input.is_action_just_pressed("space"):
 		if once_wake_up:
 			once_wake_up = false
